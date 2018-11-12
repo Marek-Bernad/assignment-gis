@@ -40,7 +40,7 @@ My client side consists of files for browser common with client-server communica
 
 Example of UI looks like follows:
 
-![My UI picture](https://github.com/Marek-Bernad/assignment-gis/tree/master/images/ui.png)
+![My UI picture](https://github.com/Marek-Bernad/assignment-gis/blob/master/images/ui.png)
 
 ## Server side
 
