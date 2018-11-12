@@ -16,7 +16,7 @@ Build a map-based application, which lets the user see geo-based data on a map a
 
 - [Open Street Maps](https://www.openstreetmap.org/)
 
-# fiit-pdt-project
+# My fiit-pdt-project - Bratislava
 Project for subject PDT on FIIT, STU - Geo queries with Bratislava
 
 ## Detailed description
@@ -38,9 +38,9 @@ In this project I used following technologies:
 
 My client side consists of files for browser common with client-server communication. Most of work here involve processing user input and response from my server to show it on map.
 
-Example of UI looks liek follows:
+Example of UI looks like follows:
 
-![My UI picture](https://github.com/Marek-Bernad/fiit-pdt-project/blob/master/images/ui.png)
+![My UI picture](https://github.com/Marek-Bernad/fiit-pdt/assignment-gis/images/ui.png)
 
 ## Server side
 
