@@ -42,11 +42,19 @@ Example of UI looks like follows:
 
 ![My UI picture](https://github.com/Marek-Bernad/assignment-gis/blob/master/images/ui.png)
 
+Another scenario - heatmap - all shops that have the most closest and highest number of bus stops near by are most valued for heat:
+
+![My UI picture2](https://github.com/Marek-Bernad/assignment-gis/blob/master/images/heatmap_ui.png)
+
+Closer - the center of city have less shops that are closely reachable with bus stops:
+
+![My UI picture3](https://github.com/Marek-Bernad/assignment-gis/blob/master/images/heatmap_ui2.png)
+
 ## Server side
 
 My server side is based on Node.js server with socket.io communication between user and this server. In this project server run client UI on localhost: http://localhost:8080/. 
 
-![My server-side picture](https://github.com/Marek-Bernad/fiit-pdt-project/blob/master/images/server.png)
+![My server-side picture](https://github.com/Marek-Bernad/assignment-gis/blob/master/images/server.png)
 
 ## Scenarios / what can it do?
 
@@ -57,10 +65,17 @@ Project allows user to use following scenarios:
 * Show PgRouting from A to C but needs to go through B (map layer 4)(input: 3x text field)
 * Show polygon/polygons with edge points of specific objects like 'Billa', 'Kaufland' ... (map layer 5,6)(input: 1 text field)
 * Show polygon/polygons with edge points with given distance from middle point of Bratislava (input: 1 text field)
+* Show heatmap of all shops that have the most closest bus stops near by with distance X meters (input: 1 text field, map layer 7)
+
+## How my heatmap SQL query works in practice
+
+If I look for example for shops that have bus stops within their distance 500 meters, I will apply math as: (500 -distance(shop_A,bus_stop_A)) / coeficient later for getting heatmap value for every shop concrete point:
+
+![My UI picture](https://github.com/Marek-Bernad/assignment-gis/blob/master/images/heatmap.png)
 
 ## Datasets details
 
-* openStreetMap of Bratislava (cut area)
+* openStreetMap of Bratislava (cut area of SR)
 * traffic in Bratislava
 
 ## How to run this project
