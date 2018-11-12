@@ -71,11 +71,36 @@ Project allows user to use following scenarios:
 
 If I look for example for shops that have bus stops within their distance 500 meters, I will apply math as: (500 -distance(shop_A,bus_stop_A)) / coeficient later for getting heatmap value for every shop concrete point:
 
-![My UI picture](https://github.com/Marek-Bernad/assignment-gis/blob/master/images/heatmap.png)
+![My heatmap picture](https://github.com/Marek-Bernad/assignment-gis/blob/master/images/heatmap.png)
 
-First attempts:
+First attempts - not optimalized and very very slow:
 
+```sql
+SELECT ST_AsGeoJSON((ST_Transform(geo1, 4326))) AS geometry,heat_weight AS heat_weight FROM
+ ( SELECT SUM(distance)/125 AS heat_weight, geo1 FROM 
+  ( SELECT name,shop,500 - ST_Distance(geo1,geo2) AS distance, geo1 FROM
+   ( SELECT name, geo2 FROM ( SELECT name, way as geo2, ROW_NUMBER() OVER (PARTITION BY name ORDER BY name) FROM
+      bratislava_pdt_points WHERE name IS NOT NULL AND highway LIKE 'bus_stop' ) AS bus_stops WHERE bus_stops.row_number = 1 ) AS distincted_bus_stops, 
+   (SELECT shop, way as geo1 FROM bratislava_pdt_points WHERE shop IS NOT NULL) AS shops WHERE ST_Distance(geo1,geo2) < 500  ) AS subselect GROUP BY geo1  ) AS subselect2;
+```
+Later attempts - not optimalized and boosted by new table:
 
+```sql
+ due to threat of plagiarism I will not show it now
+```
+## Result speed analysis
+
+Pg routing sql queries speed analysis:
+
+![My statistic1 picture](https://github.com/Marek-Bernad/assignment-gis/blob/master/images/statistic1.png)
+
+Pg routing sql queries speed analysis2:
+
+![My statistic2 picture](https://github.com/Marek-Bernad/assignment-gis/blob/master/images/statistic2.png)
+
+## My Database visualization
+
+![My database picture](https://github.com/Marek-Bernad/assignment-gis/blob/master/images/database.png)
 
 ## Datasets details
 
