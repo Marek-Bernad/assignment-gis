@@ -83,7 +83,7 @@ SELECT ST_AsGeoJSON((ST_Transform(geo1, 4326))) AS geometry,heat_weight AS heat_
       bratislava_pdt_points WHERE name IS NOT NULL AND highway LIKE 'bus_stop' ) AS bus_stops WHERE bus_stops.row_number = 1 ) AS distincted_bus_stops, 
    (SELECT shop, way as geo1 FROM bratislava_pdt_points WHERE shop IS NOT NULL) AS shops WHERE ST_Distance(geo1,geo2) < 500  ) AS subselect GROUP BY geo1  ) AS subselect2;
 ```
-Later attempts - not optimalized and boosted by new table:
+Later attempts - finally working and optimalized by new boosted table:
 
 ```sql
  due to threat of plagiarism I will not show it now
