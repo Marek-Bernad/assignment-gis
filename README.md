@@ -22,6 +22,6 @@ Fill in (either in English, or in Slovak):
 
 **Application description**: `I made five scenarios upon Bratislava map. The first makes possible to show two streets with distinct colors(two seperate layers) on my map. The second scenario makes pg routing between one and second street. The third scenario makes available to make pg routing from street one to street second through street that is the closest to specific polygon building on a map. The fourth scenratio makes available to show some amount of polygons on a map, with points on those polygons, for example all shops Kaufland on a map in bratislava with specific distance meters from Fontain "Zem" before president palace. The fifth scenario is boosted heatmap of all shops in the city, that have the closest and the most of bus stops near by. That information is suitable for imobile people who on their own want to have as much as possible shop opportunities and won't to travel hard a lot. Moreover it can be used by MHD company to find out, what live parts of the city are the worst supported with transports in order to build new bus stops.`
 
-**Data source**: `<fill in>`
+**Data source**: `<[Open Street Maps](https://www.openstreetmap.org/)>`
 
 **Technologies used**: `<Node.js, HTML, CSS, JS, PSQL, Socket.io, MapBox>`
