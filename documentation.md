@@ -76,12 +76,12 @@ If I look for example for shops that have bus stops within their distance 500 me
 First attempts - not optimalized and very very slow:
 
 ```sql
-due to threat of plagiarism I will not show it now
+due to threat of plagiarism I will not show  it here, it is saved with AIS
 ```
 Later attempts - finally working and optimalized by new boosted table:
 
 ```sql
- due to threat of plagiarism I will not show it now
+ due to threat of plagiarism I will not show it here, it is saved with AIS
 ```
 ## Result speed analysis
 
@@ -95,7 +95,9 @@ Pg routing sql queries speed analysis2:
 
 ## My Database visualization
 
-
+```sql
+ due to threat of plagiarism I will not show it here, it is saved with AIS
+```
 
 ## Datasets details
 
